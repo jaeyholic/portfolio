@@ -1,5 +1,12 @@
 import { extendTheme } from '@chakra-ui/core';
 
+const breakpoints = ['30em', '48em', '62em', '80em'];
+// aliases
+breakpoints.sm = breakpoints[0];
+breakpoints.md = breakpoints[1];
+breakpoints.lg = breakpoints[2];
+breakpoints.xl = breakpoints[3];
+
 export const theme = extendTheme({
   styles: {
     global: (props) => ({
@@ -15,6 +22,7 @@ export const theme = extendTheme({
       },
     }),
   },
+  ...breakpoints,
   fonts: {
     heading: '"Inter", sans-serif',
     bold: '"Inter", sans-serif',
